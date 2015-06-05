@@ -1,6 +1,8 @@
 #--
 # Ruby Digest
 # =============================================================================
+# [![Status](https://travis-ci.org/Solistra/ruby-digest.svg?branch=master)][ci]
+# [ci]: https://travis-ci.org/Solistra/ruby-digest
 # 
 # Summary
 # -----------------------------------------------------------------------------
