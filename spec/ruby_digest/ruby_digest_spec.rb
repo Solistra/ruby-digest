@@ -8,20 +8,11 @@ describe RubyDigest do
   end
 end
 
-describe 'Digest' do
-  it 'is linked to RubyDigest' do
-    expect(Digest).to eq RubyDigest
-  end
-end
-
 describe 'Main' do
   subject { TOPLEVEL_BINDING }
   
   it 'responds to #RubyDigest' do
     expect(subject.private_methods).to include :RubyDigest
-  end
-  it 'responds to #Digest' do
-    expect(subject.private_methods).to include :Digest
   end
   
   describe '#RubyDigest' do
