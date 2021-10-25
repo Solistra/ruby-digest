@@ -518,7 +518,7 @@ module RubyDigest
       size   = string.size * 8
       buffer = string + ['10000000'].pack('B8')
       buffer << [0].pack('C') while buffer.size % 64 != 56
-      buffer << [size].pack('Q').reverse
+      buffer << [size].pack('Q>')
       buffer = buffer.unpack('C*')
       block_given? ? buffer.each_slice(64) { |chunk| yield chunk } : buffer
     end
@@ -621,7 +621,7 @@ module RubyDigest
       size = string.size * 8
       buffer = string + ['10000000'].pack('B8')
       buffer << [0].pack('C') while buffer.size % 64 != 56
-      buffer << [size].pack('Q').reverse
+      buffer << [size].pack('Q>')
       buffer = buffer.unpack('C*')
       block_given? ? buffer.each_slice(64) { |chunk| yield chunk } : buffer
     end
